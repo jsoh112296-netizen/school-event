@@ -93,6 +93,29 @@
   .modal-content {
     background: #eaf1f6; padding: 20px; border-radius: 10px; text-align: center; width: 80%; max-width: 300px;
   }
+  /* 휴대폰에서도 root와 카드가 화면 가운데에 맞도록 너비를 지정합니다. */
+  #root {
+    width: 100%;
+    max-width: 540px;
+    min-width: 0;
+    flex: 0 1 540px;
+    margin: 0 auto;
+  }
+  .app-container {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  button, .modal-content {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  @media (max-width: 480px) {
+    body { padding: 12px; }
+    .app-container { padding: 16px; }
+  }
 </style>
 
 <!-- 5. 앱 로직 (React JSX) -->
